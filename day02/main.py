@@ -1,7 +1,4 @@
-from typing import List, Callable
-
-import numpy as np
-
+from typing import List
 import fire
 
 
