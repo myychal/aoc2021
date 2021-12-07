@@ -25,7 +25,6 @@ def parse_input_file(input_file_path: str):
 def part_one(data: np.ndarray):
     max_value = np.max(data) + 1
     board = np.zeros((max_value, max_value))
-    # 675,751 -> 675,37
     for line in data:
         if line[Coords.x1] == line[Coords.x2] or line[Coords.y1] == line[
             Coords.y2]:

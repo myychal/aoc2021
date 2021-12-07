@@ -26,10 +26,6 @@ def part_two(data: np.ndarray):
     possible value(1, 2, 3, 4, 5) in the sequence separately, and using such
     lookup table to calcuate final number for a given sequence.
     """
-    # Because of the memory constraints, the solution is achieved by computing
-    # number of lanternfish for each possible value(1, 2, 3, 4, 5) in the
-    # sequence separately, and using such lookup table to calcuate final number
-    # for a given sequence
     # lookup = {
     #     1: 6206821033,
     #     2: 5617089148,
