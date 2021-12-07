@@ -3,7 +3,6 @@ import numpy as np
 
 
 def part_one(data: np.ndarray):
-    # min_value, max_value = np.min(data), np.max(data)
     median = np.median(data)
     fuel = np.sum(np.abs(data - median))
     print(f"Answer 1: {fuel}")
