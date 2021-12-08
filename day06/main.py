@@ -8,6 +8,7 @@ def part_one(data: np.ndarray, days):
         transforms_count = (data == -1).sum()
         data = np.concatenate([data, np.full(transforms_count, 8)], dtype=np.int8)
         data[data == -1] = 6
+        print(day)
     return len(data)
 
 
