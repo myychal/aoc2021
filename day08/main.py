@@ -32,17 +32,13 @@ def decode_unique_numbers(combination, digit_codes):
     """
     for digit in combination:
         if len(digit) == 2:
-            if digit_codes[1] == '':
-                digit_codes[1] = digit
+            digit_codes[1] = digit
         elif len(digit) == 3:
-            if digit_codes[7] == '':
-                digit_codes[7] = digit
+            digit_codes[7] = digit
         elif len(digit) == 4:
-            if digit_codes[4] == '':
-                digit_codes[4] = digit
+            digit_codes[4] = digit
         elif len(digit) == 7:
-            if digit_codes[8] == '':
-                digit_codes[8] = digit
+            digit_codes[8] = digit
     combination.remove(digit_codes[1])
     combination.remove(digit_codes[7])
     combination.remove(digit_codes[4])
@@ -156,6 +152,7 @@ def part_two(combinations: list, outputs: list):
         combination, digit_codes = find_nine(combination, digit_codes)
         combination, digit_codes = find_five(combination, digit_codes)
         combination, digit_codes = find_three(combination, digit_codes)
+        # Leftover digit is digit 2
         digit_codes[2] = combination[0]
         decoded_output = decode_output(output, digit_codes)
         results.append(int(decoded_output))
@@ -167,7 +164,6 @@ def main(input_file_path: str):
     result1 = part_one(outputs)
     print(f"Answer 1: {result1}")
     part_two(combinations, outputs)
-    a = 5
 
 
 if __name__ == '__main__':
