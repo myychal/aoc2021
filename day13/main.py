@@ -3,6 +3,7 @@ import re
 
 import fire
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def parse_input_file(input_file_path: str):
@@ -59,9 +60,8 @@ def part_one(matrix: np.ndarray, instructions):
 
 def part_two(matrix: np.ndarray, instructions):
     matrix = fold_matrix(matrix, instructions)
-    letters = [matrix[:, x:x + 4] for x in range(0, matrix.shape[1], 5)]
-    for letter in letters:
-        print(letter.astype(int))
+    plt.imshow(matrix, cmap='hot')
+    plt.show()
 
 
 def main(input_file_path: str):
